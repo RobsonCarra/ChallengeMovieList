@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.ceep.ui.challenge_movielist.R
 import br.com.alura.ceep.ui.challenge_movielist.domain.Movie
+import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 import java.time.*
 import java.util.*

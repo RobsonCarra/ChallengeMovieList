@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.ceep.ui.challenge_movielist.R
 import br.com.alura.ceep.ui.challenge_movielist.domain.Movie
-import br.com.alura.ceep.ui.challenge_movielist.presentation.custom.MovieViewHolder
 
 class MovieAdapter :
     RecyclerView.Adapter<MovieViewHolder>() {
