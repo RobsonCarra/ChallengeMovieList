@@ -3,12 +3,12 @@ package br.com.alura.ceep.ui.challenge_movielist.domain
 import java.time.Year
 
 class Movie(
-    id: Long,
-    title: String,
-    year: Long,
-    runtime: Long,
-    director: String,
-    actors: String,
-    plot: String,
-    image: String
+    var id: Long,
+    var title: String,
+    var year: Long,
+    var runtime: Long,
+    var director: String,
+    var actors: String,
+    var plot: String,
+    var image: String
 )
