@@ -1,0 +1,2 @@
+rootProject.name = "Challenge - Movie List"
+include ':app'
