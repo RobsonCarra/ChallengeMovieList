@@ -15,6 +15,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@color/white"
+        android:elevation="4dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,28 +30,30 @@
             android:background="@color/white">
 
             <TextView
-                android:id="@+id/duration"
+                android:id="@+id/duration_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Duração"
                 android:textColor="#070707"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/name_movies"
+                app:layout_constraintStart_toStartOf="@+id/name_movies_item"
                 app:layout_constraintTop_toBottomOf="@+id/duration_text" />
 
             <TextView
-                android:id="@+id/name_movies"
+                android:id="@+id/name_movies_item"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:text="Nome do filme"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/image_movie"
-                app:layout_constraintTop_toTopOf="@+id/image_movie" />
+                app:layout_constraintEnd_toEndOf="@+id/bad_healthy_button"
+                app:layout_constraintStart_toEndOf="@+id/image_movie_item"
+                app:layout_constraintTop_toTopOf="@+id/image_movie_item" />
 
             <ImageButton
                 android:id="@+id/bad_healthy_button"
@@ -60,12 +63,12 @@
                 android:background="#00FFFFFF"
                 android:scaleX="1.25"
                 android:scaleY="1.25"
-                app:layout_constraintBottom_toBottomOf="@+id/name_movies"
+                app:layout_constraintBottom_toBottomOf="@+id/name_movies_item"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/name_movies" />
+                app:layout_constraintTop_toTopOf="@+id/name_movies_item" />
 
             <ImageView
-                android:id="@+id/image_movie"
+                android:id="@+id/image_movie_item"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -74,14 +77,14 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/year"
+                android:id="@+id/year_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ano"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/duration"
+                app:layout_constraintBottom_toBottomOf="@+id/duration_item"
                 app:layout_constraintEnd_toEndOf="@+id/year_text"
                 app:layout_constraintStart_toStartOf="@+id/year_text"
                 app:layout_constraintTop_toBottomOf="@+id/year_text" />
@@ -95,16 +98,16 @@
                 android:textColor="#7A7474"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/duration"
+                app:layout_constraintEnd_toEndOf="@+id/duration_item"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/duration"
-                app:layout_constraintTop_toBottomOf="@+id/name_movies" />
+                app:layout_constraintStart_toStartOf="@+id/duration_item"
+                app:layout_constraintTop_toBottomOf="@+id/name_movies_item" />
 
             <TextView
                 android:id="@+id/year_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="64dp"
                 android:text="Ano"
                 android:textColor="#7A7474"
                 android:textSize="12sp"

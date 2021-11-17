@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitConfig {
     fun getClient(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://mocki.io/v1/ad07ea3d-ce43-49e7-ad58-29dcdef136f5")
+            .baseUrl("https://mocki.io/")
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(GsonConverterFactory.create())
             .client(

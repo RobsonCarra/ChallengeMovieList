@@ -1,8 +1,10 @@
 package br.com.alura.ceep.ui.challenge_movielist.domain
 
-import java.time.Year
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-class Movie(
+@Parcelize
+data class Movie(
     var id: Long,
     var title: String,
     var year: Long,
@@ -10,5 +12,5 @@ class Movie(
     var director: String,
     var actors: String,
     var plot: String,
-    var image: String
-)
+    var posterUrl: String
+):Parcelable

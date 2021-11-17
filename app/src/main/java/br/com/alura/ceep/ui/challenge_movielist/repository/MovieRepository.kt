@@ -1,5 +1,6 @@
 package br.com.alura.ceep.ui.challenge_movielist.repository
 
+import br.com.alura.ceep.ui.challenge_movielist.domain.ApiResponse
 import br.com.alura.ceep.ui.challenge_movielist.domain.Movie
 import br.com.alura.ceep.ui.coffemachine.exceptions.BadGatewayException
 import br.com.alura.ceep.ui.coffemachine.exceptions.BadRequestException
@@ -10,6 +11,7 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.Retrofit
 import java.lang.Exception
 import java.net.HttpURLConnection
+import java.util.*
 
 class MovieRepository(private val client: Retrofit) {
     suspend fun getAll() = flow {
@@ -17,7 +19,10 @@ class MovieRepository(private val client: Retrofit) {
         val req = api.getAll()
         val res = req.await()
         when (res.code()) {
-            HttpURLConnection.HTTP_OK -> emit(Res.Success(res.body() as List<Movie>))
+            HttpURLConnection.HTTP_OK -> {
+                val response = res.body() as ApiResponse
+                emit(Res.Success(response.movies))
+            }
             HttpURLConnection.HTTP_NOT_FOUND -> emit(Res.Failure(NotFoundException()))
             HttpURLConnection.HTTP_BAD_REQUEST -> emit(Res.Failure(BadRequestException()))
             HttpURLConnection.HTTP_BAD_GATEWAY -> emit(Res.Failure(BadGatewayException()))

@@ -7,7 +7,7 @@
     android:background="@color/white">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/coffe_toolbar"
+        android:id="@+id/movie_toolbar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="0dp"
@@ -24,16 +24,16 @@
         android:id="@+id/director"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="Diretor"
         android:textColor="#7A7474"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/image_movie"
-        app:layout_constraintTop_toBottomOf="@+id/image_movie" />
+        app:layout_constraintStart_toStartOf="@+id/image_movie_item_detail"
+        app:layout_constraintTop_toBottomOf="@+id/image_movie_item_detail" />
 
     <TextView
-        android:id="@+id/duration"
+        android:id="@+id/duration_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/director" />
 
     <TextView
-        android:id="@+id/name_movies"
+        android:id="@+id/name_movies_item_detail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -66,8 +66,8 @@
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_movie"
-        app:layout_constraintTop_toTopOf="@+id/image_movie" />
+        app:layout_constraintStart_toEndOf="@+id/image_movie_item_detail"
+        app:layout_constraintTop_toTopOf="@+id/image_movie_item_detail" />
 
     <ImageButton
         android:id="@+id/bad_healthy_button"
@@ -77,18 +77,18 @@
         android:background="#00FFFFFF"
         android:scaleX="1.25"
         android:scaleY="1.25"
-        app:layout_constraintBottom_toBottomOf="@+id/name_movies"
+        app:layout_constraintBottom_toBottomOf="@+id/name_movies_item_detail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/name_movies" />
+        app:layout_constraintTop_toTopOf="@+id/name_movies_item_detail" />
 
-        <ImageView
-            android:id="@+id/image_movie"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coffe_toolbar"
-            tools:srcCompat="@tools:sample/avatars" />
+    <ImageView
+        android:id="@+id/image_movie_item_detail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_toolbar"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/descrição"
@@ -100,11 +100,11 @@
         android:textColor="#7A7474"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_movie"
-        app:layout_constraintTop_toBottomOf="@+id/name_movies" />
+        app:layout_constraintStart_toEndOf="@+id/image_movie_item_detail"
+        app:layout_constraintTop_toBottomOf="@+id/name_movies_item_detail" />
 
     <TextView
-        android:id="@+id/year"
+        android:id="@+id/year_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ano"
@@ -117,12 +117,15 @@
 
     <TextView
         android:id="@+id/actors"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:text="Atores"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/year_item"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/actor_text"
         app:layout_constraintTop_toBottomOf="@+id/actor_text" />
 
@@ -134,9 +137,9 @@
         android:textColor="#7A7474"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/duration"
-        app:layout_constraintEnd_toEndOf="@+id/duration"
-        app:layout_constraintStart_toStartOf="@+id/duration" />
+        app:layout_constraintBottom_toTopOf="@+id/duration_item"
+        app:layout_constraintEnd_toEndOf="@+id/duration_item"
+        app:layout_constraintStart_toStartOf="@+id/duration_item" />
 
     <TextView
         android:id="@+id/year_text"
@@ -147,8 +150,8 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/actors"
-        app:layout_constraintEnd_toEndOf="@+id/duration"
-        app:layout_constraintStart_toStartOf="@+id/duration"
+        app:layout_constraintEnd_toEndOf="@+id/duration_item"
+        app:layout_constraintStart_toStartOf="@+id/duration_item"
         app:layout_constraintTop_toTopOf="@+id/actor_text" />
 
     <TextView
@@ -156,7 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Actor"
+        android:text="Atores"
         android:textColor="#7A7474"
         android:textSize="12sp"
         android:textStyle="bold"
